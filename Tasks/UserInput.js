@@ -13,7 +13,7 @@ function FaceBookDataCollection() {
         Marmatian = true;
     }
     var Decades = Age / 10;
-    var message = "\nHello " + FirstInitial + "," + Surname + ",\nIt is " + Marmatian + " that you like Marmite.\nThis is probably because you are " + Decades + " decades old.";
+    var message = "\nHello " + FirstInitial + ", " + Surname + ",\nIt is " + Marmatian + " that you like Marmite.\nThis is probably because you are " + Decades + " decades old.";
     console.log(message);
 }
 exports.FaceBookDataCollection = FaceBookDataCollection;
