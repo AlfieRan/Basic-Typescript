@@ -1,2 +1,2 @@
-tsc ./index.ts
-node ./index.js
+tsc ./index.ts --outDir ./ExportedJS
+node ./ExportedJS/index.js

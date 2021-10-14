@@ -10,44 +10,21 @@ import { ChatBot } from './Tasks/FlowChart';
 import { BillSplitter} from './Tasks/BillSplitter'
 import { GuessAnimal } from './Tasks/selection'
 import { GuessTheVeg } from './Tasks/selection'
+import { TimesTable } from './Tasks/finiteIteration'
+import { BetterTimesTable } from './Tasks/finiteIteration';
+import { NumberGuessing } from './Tasks/controlledIteration';
 
 // Depending on which of these are true is which ones run/don't run
-const RunTask1: boolean = false;    //Variables and Strings Tasks
-const RunTask2: boolean = false;    //UserInput tasks
-const RunTask3: boolean = false;    //FlowChart Task
-const RunTask4: boolean = false;     //BillSplitter Task (Maths)
-const RunTask5: boolean = false;     //Guess the Animal (Selection)
-const RunTask6: boolean = true;     //Guess the Veg (Selection)
+const Tasks: Array<VoidFunction> = [circleRadius, Sentance, FaceBookDataCollection, ChatBot, BillSplitter, GuessAnimal, GuessTheVeg, TimesTable, BetterTimesTable, NumberGuessing];
+const TaskName: Array<string> = ["Using Pi to find a radius Task", "random sentence task", "Task: collect user data", "Task: bad chatbot", "Bill splitter", "Animal Guessing game", "vegetable guessing game", "times table program", "user input times tables", "Number Guessing Game"]
+const Runtasks: Array<boolean> = [false,false,false,false,false,false,false,false,false,true];
 
-if (RunTask1)
+for (let i=0; i<(Tasks.length+1); i++)
 {
-    console.log("----------Task 1----------");
-    circleRadius(); // The pi task
-    Sentance(); // The silly sentences task
+    if (Runtasks[i] == true)
+    {
+        console.log("\n---------------Running: ", TaskName[i],"--------------------\n");
+        Tasks[i]();
+    }
 }
-if (RunTask2)
-{
-    console.log("----------Task 2----------");
-    FaceBookDataCollection(); // The user input (marmite, decades old etc) task
-}
-if (RunTask3)
-{
-    console.log("----------Task 3----------");
-    ChatBot();
-}
-if (RunTask4)
-{
-    console.log("----------Task 4----------");
-    BillSplitter();
-}
-if (RunTask5)
-{
-    console.log("----------Task 5----------");
-    GuessAnimal();
-}
-if (RunTask6)
-{
-    console.log("----------Task 6----------");
-   GuessTheVeg();
-}
-console.log("---------PROGRAM ENDED---------");
+console.log("\n---------PROGRAM ENDED---------\n");
