@@ -12,11 +12,12 @@ import { TimesTable,BetterTimesTable } from './Tasks/finiteIteration'
 import { NumberGuessing } from './Tasks/controlledIteration';
 import { OOPTask1 } from './Tasks/OOP_task1&2'
 import { runPogShape } from './Tasks/shapes Task/mainShapes'
+import { LargerTesting, Test_HCF } from './Tasks/Functions&testing';
 
 // Depending on which of these are true is which ones run/don't run
-const Tasks: Array<VoidFunction> = [circleRadius, Sentance, FaceBookDataCollection, ChatBot, BillSplitter, GuessAnimal, GuessTheVeg, TimesTable, BetterTimesTable, NumberGuessing, OOPTask1, runPogShape];
-const TaskName: Array<string> = ["Using Pi to find a radius Task", "random sentence task", "Task: collect user data", "Task: bad chatbot", "Bill splitter", "Animal Guessing game", "vegetable guessing game", "times table program", "user input times tables", "Number Guessing Game", "OOP Task 1 (Jeffery Bezzos)", "shapey time"]
-const Runtasks: Array<boolean> = [false,false,false,false,false,false,false,false,false,false,false,true];
+const Tasks: Array<VoidFunction> = [circleRadius, Sentance, FaceBookDataCollection, ChatBot, BillSplitter, GuessAnimal, GuessTheVeg, TimesTable, BetterTimesTable, NumberGuessing, OOPTask1, runPogShape, LargerTesting, Test_HCF];
+const TaskName: Array<string> = ["Using Pi to find a radius Task", "random sentence task", "Task: collect user data", "Task: bad chatbot", "Bill splitter", "Animal Guessing game", "vegetable guessing game", "times table program", "user input times tables", "Number Guessing Game", "OOP Task 1 (Jeffery Bezzos)", "shapey time", "Which is larger (testing)", "Highest common factor (testing)"]
+const Runtasks: Array<boolean> = [false,false,false,false,false,false,false,false,false,false,false,false,false,true];
 
 for (let i=0; i<(Tasks.length+1); i++)
 {
