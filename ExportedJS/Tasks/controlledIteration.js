@@ -5,7 +5,6 @@ var promptSync = require("prompt-sync");
 var prompt = promptSync();
 function NumberGuessing() {
     var number = GetRandInt(1, 10);
-    console.log(number);
     var guess = parseInt(prompt("Guess a number between 1 and 10 (inclusive): "));
     while (guess != number) {
         console.log("Incorrect!");
